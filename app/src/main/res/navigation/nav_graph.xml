@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.example.healthcareet.HomeFragment"
+              android:label="Home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_homeFragment_to_childFragment" app:destination="@id/childFragment"/>
+        <action android:id="@+id/action_homeFragment_to_treatFragment" app:destination="@id/treatFragment"/>
+        <action android:id="@+id/action_homeFragment_to_contactUsFragment" app:destination="@id/contactUsFragment"/>
+        <action android:id="@+id/action_homeFragment_to_addMedicalFragment" app:destination="@id/addMedicalFragment"/>
+    </fragment>
+    <fragment android:id="@+id/childFragment" android:name="com.example.healthcareet.ChildFragment"
+              android:label="Child Care" tools:layout="@layout/fragment_child">
+        <action android:id="@+id/action_childFragment_to_oneMonthFragment" app:destination="@id/oneMonthFragment"/>
+        <action android:id="@+id/action_childFragment_to_sixMonthFragment" app:destination="@id/sixMonthFragment"/>
+        <action android:id="@+id/action_childFragment_to_twelveMonthFragment"
+                app:destination="@id/twelveMonthFragment"/>
+        <action android:id="@+id/action_childFragment_to_aboveMonthFragment" app:destination="@id/aboveMonthFragment"/>
+    </fragment>
+    <fragment android:id="@+id/treatFragment" android:name="com.example.healthcareet.TreatFragment"
+              android:label="Treat Common Ache" tools:layout="@layout/fragment_treat">
+        <action android:id="@+id/action_treatFragment_to_toothacheFragment" app:destination="@id/toothacheFragment"/>
+        <action android:id="@+id/action_treatFragment_to_headacheFragment" app:destination="@id/headacheFragment"/>
+        <action android:id="@+id/action_treatFragment_to_muscleFragment" app:destination="@id/muscleFragment"/>
+        <action android:id="@+id/action_treatFragment_to_commonFragment" app:destination="@id/commonFragment"/>
+        <action android:id="@+id/action_treatFragment_to_asthemaFragment" app:destination="@id/asthemaFragment"/>
+        <action android:id="@+id/action_treatFragment_to_heartFragment" app:destination="@id/heartFragment"/>
+    </fragment>
+    <fragment android:id="@+id/oneMonthFragment" android:name="com.example.healthcareet.OneMonthFragment"
+              android:label="One Month Baby" tools:layout="@layout/fragment_one_month"/>
+    <fragment android:id="@+id/sixMonthFragment" android:name="com.example.healthcareet.SixMonthFragment"
+              android:label="Six Month Baby" tools:layout="@layout/fragment_six_month"/>
+    <fragment android:id="@+id/twelveMonthFragment" android:name="com.example.healthcareet.TwelveMonthFragment"
+              android:label="Twelve Month Baby" tools:layout="@layout/fragment_twelve_month"/>
+    <fragment android:id="@+id/aboveMonthFragment" android:name="com.example.healthcareet.AboveMonthFragment"
+              android:label="12 Month Above Baby" tools:layout="@layout/fragment_above_month"/>
+    <fragment android:id="@+id/headacheFragment" android:name="com.example.healthcareet.HeadacheFragment"
+              android:label="Headache" tools:layout="@layout/fragment_headache"/>
+    <fragment android:id="@+id/heartFragment" android:name="com.example.healthcareet.HeartFragment"
+              android:label="Heart Disease" tools:layout="@layout/fragment_heart"/>
+    <fragment android:id="@+id/toothacheFragment" android:name="com.example.healthcareet.ToothacheFragment"
+              android:label="Toothache" tools:layout="@layout/fragment_toothache"/>
+    <fragment android:id="@+id/muscleFragment" android:name="com.example.healthcareet.MuscleFragment"
+              android:label="Muscle Pain" tools:layout="@layout/fragment_muscle"/>
+    <fragment android:id="@+id/commonFragment" android:name="com.example.healthcareet.CommonFragment"
+              android:label="Common Cold" tools:layout="@layout/fragment_common"/>
+    <fragment android:id="@+id/asthemaFragment" android:name="com.example.healthcareet.AsthemaFragment"
+              android:label="Asthema" tools:layout="@layout/fragment_asthema"/>
+    <fragment android:id="@+id/contactUsFragment" android:name="com.example.healthcareet.ContactUsFragment"
+              android:label="Contact Us" tools:layout="@layout/fragment_contact_us"/>
+    <fragment android:id="@+id/addMedicalFragment" android:name="com.example.healthcareet.AddMedicalFragment"
+              android:label="Add Medical History" tools:layout="@layout/fragment_add_medical"/>
+</navigation>
