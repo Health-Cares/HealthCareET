@@ -39,18 +39,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val button = view.findViewById<Button>(R.id.add_button)
-//        button?.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_addMedicalFragment)
-//        }
-//        val buttonC = view.findViewById<Button>(R.id.child_button)
-//        buttonC?.setOnClickListener {
-//            findNavController().navigate(R.id.action_homeFragment_to_childFragment)
-//        }
-        val buttonT = view.findViewById<Button>(R.id.treat_button)
-        buttonT?.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_treatFragment)
-        }
         val buttonCo = view.findViewById<Button>(R.id.contactus_button)
         buttonCo?.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_contactUsFragment)
