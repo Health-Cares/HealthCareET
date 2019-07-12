@@ -9,7 +9,7 @@
 
         <variable
                 name="viewmodel"
-                type="com.example.healthcare.data.MedicalViewModelSolution"/>
+                type="com.example.healthcareet.data.MedicalViewModelSolution"/>
     </data>
     <FrameLayout
             android:layout_width="match_parent"
