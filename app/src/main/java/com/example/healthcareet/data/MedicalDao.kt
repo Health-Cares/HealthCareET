@@ -1,10 +1,7 @@
 package com.example.healthcare.data
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.healthcareet.data.Medical
 
 @Dao
@@ -14,6 +11,15 @@ interface MedicalDao {
     fun getAllMedicals(): LiveData<List<Medical>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertMedicals(medical: Medical):Long
+    fun insertMedical(medical: Medical):Long
+
+
+    @Delete
+    fun deleteMedical(medical: Medical):Int
+
+    @Update
+    fun updateMedical(medical: Medical):Int
+
+
 }
 
