@@ -10,20 +10,20 @@ import com.example.healthcareet.data.Medical
 import kotlinx.android.synthetic.main.recycler_view_item.view.*
 
 
-abstract class MedicalAdapter(context: Context):
+class MedicalAdapter(context: Context):
     RecyclerView.Adapter<MedicalAdapter.MedicalViewHolder>() {
 
-
+    private val inflater = LayoutInflater.from(context)
     private var medical: List<Medical> = emptyList()
 
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicalViewHolder {
-//
-//        val recyclerViewItem =
-//            inflater
-//                .inflate(R.layout.recycler_view_item, parent, false)
-//
-//        return MedicalViewHolder(recyclerViewItem)
-//    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MedicalViewHolder {
+
+        val recyclerViewItem =
+            inflater
+                .inflate(R.layout.recycler_view_item, parent, false)
+
+        return MedicalViewHolder(recyclerViewItem)
+    }
 
     override fun getItemCount() = medical.size
 
