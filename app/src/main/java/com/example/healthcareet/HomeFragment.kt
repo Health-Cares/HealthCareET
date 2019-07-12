@@ -1,17 +1,22 @@
 package com.example.healthcareet
 
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Button
+import android.widget.EditText
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.healthcareet.data.Medical
 import com.example.healthcareet.databinding.FragmentHomeBinding
+import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.fragment_add_medical.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
@@ -26,6 +31,9 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
 
+    private lateinit var saveButton: Button
+    private lateinit var first: TextInputEditText
+    private lateinit var last: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,10 +47,6 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonCo = view.findViewById<Button>(R.id.contactus_button)
-        buttonCo?.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_contactUsFragment)
-        }
         val options = navOptions {
             anim {
                 enter = R.anim.slide_in_right
@@ -75,6 +79,17 @@ class HomeFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.treat_button)?.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_treatFragment, null, options2)
+        }
+        val options3 = navOptions {
+            anim {
+                enter = R.anim.slide_in_left
+                exit = R.anim.slide_out_right
+                popEnter = R.anim.slide_in_right
+                popExit = R.anim.slide_out_left
+            }
+        }
+        view.findViewById<Button>(R.id.contactus_button)?.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_contactUsFragment, null, options3)
         }
     }
 
