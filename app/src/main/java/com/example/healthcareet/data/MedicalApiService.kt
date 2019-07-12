@@ -15,13 +15,13 @@ interface MedicalApiService {
     fun getAllMedicals(@Path("first_name")first_name :Long): Deferred<Response<Medical>>
 
     @POST("medicals")
-    fun insertMedicals(@Body medical: Medical): Deferred<Response<Medical>>
+    fun insertMedical(@Body medical: Medical): Deferred<Response<Medical>>
 
     @PUT("medicals/{first_name}")
-    fun updateMedicals(@Path("first_name") first_name: Long): Deferred<Response<Medical>>
+    fun updateMedical(@Path("first_name") first_name: Long): Deferred<Response<Medical>>
 
     @DELETE("medicals/{first_name}")
-    fun deleteMedicals(@Path("first_name") first_name: Long): Deferred<Response<Void>>
+    fun deleteMedical(@Path("first_name") first_name: Long): Deferred<Response<Void>>
 
     companion object {
         private val baseUrl = ""
